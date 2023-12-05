@@ -1,5 +1,17 @@
-export default function Home (){
+import Banner from "./components/Banner";
+
+export const revalidate = 0
+export default function Home() {
   return (
-    <h1> teste </h1>
+    <div className="bg-[#3d3d3d]">
+      <div className="max-w-[1440px] m-auto ">
+
+        <Banner />
+
+
+      </div>
+    </div>
+
+
   )
 }
