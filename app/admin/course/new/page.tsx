@@ -1,9 +1,10 @@
+import UploadButton from "@/app/components/UploadButton";
 import { sql } from "@vercel/postgres";
 import { useSearchParams } from "next/navigation";
 
 export const revalidate =0
 
-export default function NewCoordenador({
+export default function NewCourse({
     searchParams,
   }: {
     searchParams?: {
@@ -27,6 +28,8 @@ export default function NewCoordenador({
                 <input type="text" name="title" placeholder="Digite o Título do Curso"/><br/><br/>
                 <input type="text" name="description" placeholder="Digite a Descriçao do curso"/> <br/><br/>
                 <br/>
+                <UploadButton />
+                <button formAction={saveCourse} className="text-white">Salvar</button>
             </form>
         </div>
 
